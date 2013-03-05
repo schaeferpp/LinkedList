@@ -5,15 +5,15 @@
 /**
  * Run with the list->runner to the position
  */
-void run(linked_list_t list, int position)
+void run(plinked_list list, int position)
 {
 	int i;
 	int diff1, diff2, diff3, min;
 	short int num;
 
-	diff1 = list->size - position;
+	diff1 = position;
 	diff2 = list->runnerpos - position;
-	diff3 = position;
+	diff3 = list->size - position;
 
 	min = abs(diff1);
 	num = 1;
@@ -27,7 +27,6 @@ void run(linked_list_t list, int position)
 		min = diff3;
 		num = 3;
 	}
-
 	switch (num)
 	{
 	case 1: // am nächsten an first
@@ -63,21 +62,26 @@ void run(linked_list_t list, int position)
 		}
 		break;
 	}
+	list->runnerpos = position;
 }
 
-void list_append(linked_list_t list, char* value)
+void list_append(plinked_list list, char* value)
 {
-	node_t newnode;
-	newnode = malloc(sizeof(struct node));
-
+	pnode newnode;
+	newnode = malloc(sizeof(node_t));
 	newnode->content = value;
 	newnode->previous = list->last;
 	newnode->next = NULL;
-
-	list->last->next = newnode;
+	if(list->size>0)
+	{
+		list->last->next = newnode;
+	}
+	else 
+	{
+		list->head = newnode;
+	}	
 	list->last = newnode;
 	list->size++;
-
 	return;
 }
 
@@ -88,9 +92,9 @@ inline int abs(int a)
 	return a;
 }
 
-void list_insert(linked_list_t list, int position, char* value)
+void list_insert(plinked_list list, int position, char* value)
 {
-	node_t newnode;
+	pnode newnode;
 
 	newnode = malloc(sizeof(struct node));
 	newnode->content = value;
@@ -112,18 +116,34 @@ void list_insert(linked_list_t list, int position, char* value)
 	list->size++;
 }
 
-void list_remove(linked_list_t list, int position)
+void list_remove(plinked_list list, int position)
 {
 
 }
 
-char* list_get(linked_list_t list, int position)
+char* list_get(plinked_list list, int position)
 {
+	if(position >= list->size) 
+	{	
+		return NULL;
+	}
 	run(list, position);
 	return list->runner->content;
 }
 
-void list_add_all(linked_list_t list, char** elems)
+void list_add_all(plinked_list list, char** elems)
 {
 	return;
+}
+
+plinked_list init_list()
+{
+	plinked_list list = malloc(sizeof(linked_list_t));
+	
+	list->head = NULL;
+	list->last = NULL;
+	list->runner = NULL;
+	list->size = 0;
+	list->runnerpos = 0;
+	return list;
 }

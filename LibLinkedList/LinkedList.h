@@ -1,34 +1,40 @@
 #ifndef __LINKEDLIST_H
 #define __LINKEDLIST_H
-
-typedef struct node
+	
+struct node
 {
 	struct node* next;
 	struct node* previous;
 	char* content;
-} *node_t;
+};
 
-//typedef node* node_t;
+typedef struct node node_t;
 
-typedef struct
+typedef node_t* pnode;
+
+struct linked_list
 {
-	node_t head;
-	node_t last;
-	node_t runner;
+	pnode head;
+	pnode last;
+	pnode runner;
 	int runnerpos;
 	int size;
-} linked_list;
+};
 
-typedef linked_list* linked_list_t;
+typedef struct linked_list linked_list_t;
 
-void list_append(linked_list_t list, char* value);
+typedef linked_list_t* plinked_list;
 
-void list_insert(linked_list_t list, int position, char* value);
+void list_append(plinked_list list, char* value);
 
-void list_remove(linked_list_t list, int position);
+void list_insert(plinked_list list, int position, char* value);
 
-char* list_get(linked_list_t list, int position);
+void list_remove(plinked_list list, int position);
 
-void list_add_all(linked_list_t list, char** elems);
+char* list_get(plinked_list list, int position);
+
+void list_add_all(plinked_list list, char** elems);
+
+plinked_list init_list();
 
 #endif
