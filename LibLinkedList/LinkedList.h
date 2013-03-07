@@ -33,7 +33,7 @@ void list_remove(plinked_list list, int position);
 
 char* list_get(plinked_list list, int position);
 
-void list_add_all(plinked_list list, char** elems);
+void list_add_all(plinked_list list, char** elems, int count);
 
 plinked_list init_list();
 

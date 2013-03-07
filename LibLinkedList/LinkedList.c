@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+inline int abs(int a)
+{
+	if (a < 0)
+		return -a;
+	return a;
+}
+
 /**
  * Run with the list->runner to the position
  */
@@ -19,17 +26,19 @@ void run(plinked_list list, int position)
 	num = 1;
 	if (abs(diff2) < min)
 	{
-		min = diff2;
+		min = abs(diff2);
 		num = 2;
 	}
 	if (abs(diff3) < min)
 	{
-		min = diff3;
+		min = abs(diff3);
 		num = 3;
 	}
+
 	switch (num)
 	{
 	case 1: // am nächsten an first
+		printf("head\n");
 		list->runner = list->head;
 		for (i = 0; i < position; i++)
 		{
@@ -37,6 +46,7 @@ void run(plinked_list list, int position)
 		}
 		break;
 	case 2:
+		printf("runner\n");
 		// insert VOR runner
 		if ((list->runnerpos - position) > 0)
 		{
@@ -55,8 +65,9 @@ void run(plinked_list list, int position)
 		}
 		break;
 	case 3: // am nächsten an last
+		printf("last\n");
 		list->runner = list->last;
-		for (i = 0; i > position; i--)
+		for (i = list->size-1; i > position; i--)
 		{
 			list->runner = list->runner->previous;
 		}
@@ -85,13 +96,6 @@ void list_append(plinked_list list, char* value)
 	return;
 }
 
-inline int abs(int a)
-{
-	if (a < 0)
-		return -a;
-	return a;
-}
-
 void list_insert(plinked_list list, int position, char* value)
 {
 	pnode newnode;
@@ -118,12 +122,19 @@ void list_insert(plinked_list list, int position, char* value)
 
 void list_remove(plinked_list list, int position)
 {
-
+	if(position < 0 || position >= list->size)
+	{
+		return;
+	}
+	
+	run(list, position);
+	list->runner->previous->next = list->runner->next;
+	list->runner->next->previous = list->runner->previous;
 }
 
 char* list_get(plinked_list list, int position)
 {
-	if(position >= list->size) 
+	if(position >= list->size || position < 0) 
 	{	
 		return NULL;
 	}
@@ -131,8 +142,13 @@ char* list_get(plinked_list list, int position)
 	return list->runner->content;
 }
 
-void list_add_all(plinked_list list, char** elems)
+void list_add_all(plinked_list list, char** elems, int count)
 {
+	int i;
+	for(i=0; i<count; i++)
+	{
+		list_append(list, elems[i]);
+	}
 	return;
 }
 
