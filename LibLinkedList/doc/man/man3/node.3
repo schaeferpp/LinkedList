@@ -1,0 +1,38 @@
+.TH "node" 3 "Thu Mar 21 2013" "Version 1" "LinkedList" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+node \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LinkedList\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "struct \fBnode\fP * \fBnext\fP"
+.br
+.ti -1c
+.RI "struct \fBnode\fP * \fBprevious\fP"
+.br
+.ti -1c
+.RI "void * \fBcontent\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents the data node\&. Pointer to following and previous node are stored\&. 
+.SH "Field Documentation"
+.PP 
+.SS "void* content"
+The actual content of this Node\&. The size only knows the creator of this object\&. If there are dynamically sized objects to be stored here with corresponding size it is recommended to create a struct with these informations and store a pointer to that struct in a Node\&. 
+.SS "struct \fBnode\fP* next"
+Pointer to the following Node\&. 
+.SS "struct \fBnode\fP* previous"
+Pointer to the previous Node\&. previous->next should be this Node\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LinkedList from the source code\&.

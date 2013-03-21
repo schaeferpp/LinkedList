@@ -1,0 +1,104 @@
+\hypertarget{_linked_list_8h}{\section{/home/paul/\-Git\-\_\-home/\-Util/\-Linked\-List/\-Lib\-Linked\-List/\-Linked\-List.h File Reference}
+\label{_linked_list_8h}\index{/home/paul/\-Git\-\_\-home/\-Util/\-Linked\-List/\-Lib\-Linked\-List/\-Linked\-List.\-h@{/home/paul/\-Git\-\_\-home/\-Util/\-Linked\-List/\-Lib\-Linked\-List/\-Linked\-List.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnode}{node}
+\item 
+struct \hyperlink{structlinked__list}{linked\-\_\-list}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structnode}{node} \hyperlink{_linked_list_8h_a7c02633e18d6aa5f58539b75f08753d9}{node\-\_\-t}
+\item 
+typedef \hyperlink{_linked_list_8h_a7c02633e18d6aa5f58539b75f08753d9}{node\-\_\-t} $\ast$ \hyperlink{_linked_list_8h_a0ba2245d580824f87132187a6b604079}{pnode}
+\item 
+typedef struct \hyperlink{structlinked__list}{linked\-\_\-list} \hyperlink{_linked_list_8h_a4b66e4d3b6bddf6ccf18ee41b6374c9f}{linked\-\_\-list\-\_\-t}
+\item 
+typedef \hyperlink{_linked_list_8h_a4b66e4d3b6bddf6ccf18ee41b6374c9f}{linked\-\_\-list\-\_\-t} $\ast$ \hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_linked_list_8h_a1770ccb8006b434a7b07385301a04187}{list\-\_\-append} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, void $\ast$value)
+\item 
+void \hyperlink{_linked_list_8h_a06408c4f092d74f12976938fe2ed8cf5}{list\-\_\-insert} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, int position, void $\ast$value)
+\item 
+void \hyperlink{_linked_list_8h_acc79aa5ede069d9de25860c4e92856bd}{list\-\_\-remove} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, int position)
+\item 
+void $\ast$ \hyperlink{_linked_list_8h_abc5ed913c644f9ec7b1b374500579364}{list\-\_\-get} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, int position)
+\item 
+void \hyperlink{_linked_list_8h_a4205586345061b0cf756a87af818f745}{list\-\_\-add\-\_\-all} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, void $\ast$$\ast$elems, int count)
+\item 
+\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} \hyperlink{_linked_list_8h_a0842d2a0b1cbfe3b856cac444197a1ce}{init\-\_\-list} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_linked_list_8h_a4b66e4d3b6bddf6ccf18ee41b6374c9f}{\index{Linked\-List.\-h@{Linked\-List.\-h}!linked\-\_\-list\-\_\-t@{linked\-\_\-list\-\_\-t}}
+\index{linked\-\_\-list\-\_\-t@{linked\-\_\-list\-\_\-t}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{linked\-\_\-list\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf linked\-\_\-list} {\bf linked\-\_\-list\-\_\-t}}}\label{_linked_list_8h_a4b66e4d3b6bddf6ccf18ee41b6374c9f}
+\hypertarget{_linked_list_8h_a7c02633e18d6aa5f58539b75f08753d9}{\index{Linked\-List.\-h@{Linked\-List.\-h}!node\-\_\-t@{node\-\_\-t}}
+\index{node\-\_\-t@{node\-\_\-t}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{node\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf node} {\bf node\-\_\-t}}}\label{_linked_list_8h_a7c02633e18d6aa5f58539b75f08753d9}
+\hypertarget{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{\index{Linked\-List.\-h@{Linked\-List.\-h}!plinked\-\_\-list@{plinked\-\_\-list}}
+\index{plinked\-\_\-list@{plinked\-\_\-list}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{plinked\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf linked\-\_\-list\-\_\-t}$\ast$ {\bf plinked\-\_\-list}}}\label{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}
+\hypertarget{_linked_list_8h_a0ba2245d580824f87132187a6b604079}{\index{Linked\-List.\-h@{Linked\-List.\-h}!pnode@{pnode}}
+\index{pnode@{pnode}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{pnode}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf node\-\_\-t}$\ast$ {\bf pnode}}}\label{_linked_list_8h_a0ba2245d580824f87132187a6b604079}
+
+
+\subsection{Function Documentation}
+\hypertarget{_linked_list_8h_a0842d2a0b1cbfe3b856cac444197a1ce}{\index{Linked\-List.\-h@{Linked\-List.\-h}!init\-\_\-list@{init\-\_\-list}}
+\index{init\-\_\-list@{init\-\_\-list}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{init\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plinked\-\_\-list} init\-\_\-list (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8h_a0842d2a0b1cbfe3b856cac444197a1ce}
+Initializes an empty list. Works like an constructor. \hypertarget{_linked_list_8h_a4205586345061b0cf756a87af818f745}{\index{Linked\-List.\-h@{Linked\-List.\-h}!list\-\_\-add\-\_\-all@{list\-\_\-add\-\_\-all}}
+\index{list\-\_\-add\-\_\-all@{list\-\_\-add\-\_\-all}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{list\-\_\-add\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-add\-\_\-all (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{void $\ast$$\ast$}]{elems, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8h_a4205586345061b0cf756a87af818f745}
+Inserts all elements of elems into the list. count has to be defined. \hypertarget{_linked_list_8h_a1770ccb8006b434a7b07385301a04187}{\index{Linked\-List.\-h@{Linked\-List.\-h}!list\-\_\-append@{list\-\_\-append}}
+\index{list\-\_\-append@{list\-\_\-append}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{list\-\_\-append}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-append (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{void $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8h_a1770ccb8006b434a7b07385301a04187}
+Appends value to the end of the list. \hypertarget{_linked_list_8h_abc5ed913c644f9ec7b1b374500579364}{\index{Linked\-List.\-h@{Linked\-List.\-h}!list\-\_\-get@{list\-\_\-get}}
+\index{list\-\_\-get@{list\-\_\-get}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{list\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ list\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8h_abc5ed913c644f9ec7b1b374500579364}
+Returns a pointer to the object at position. \hypertarget{_linked_list_8h_a06408c4f092d74f12976938fe2ed8cf5}{\index{Linked\-List.\-h@{Linked\-List.\-h}!list\-\_\-insert@{list\-\_\-insert}}
+\index{list\-\_\-insert@{list\-\_\-insert}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{list\-\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-insert (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{int}]{position, }
+\item[{void $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8h_a06408c4f092d74f12976938fe2ed8cf5}
+Inserts value into the list at the specified position. The current object at position will be at (position+1) after this operation. \hypertarget{_linked_list_8h_acc79aa5ede069d9de25860c4e92856bd}{\index{Linked\-List.\-h@{Linked\-List.\-h}!list\-\_\-remove@{list\-\_\-remove}}
+\index{list\-\_\-remove@{list\-\_\-remove}!LinkedList.h@{Linked\-List.\-h}}
+\subsubsection[{list\-\_\-remove}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-remove (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8h_acc79aa5ede069d9de25860c4e92856bd}
+Removes the element of the list at the specified position. 

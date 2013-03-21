@@ -1,0 +1,93 @@
+\hypertarget{_linked_list_8c}{\section{/home/paul/\-Git\-\_\-home/\-Util/\-Linked\-List/\-Lib\-Linked\-List/\-Linked\-List.c File Reference}
+\label{_linked_list_8c}\index{/home/paul/\-Git\-\_\-home/\-Util/\-Linked\-List/\-Lib\-Linked\-List/\-Linked\-List.\-c@{/home/paul/\-Git\-\_\-home/\-Util/\-Linked\-List/\-Lib\-Linked\-List/\-Linked\-List.\-c}}
+}
+{\ttfamily \#include \char`\"{}Linked\-List.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_linked_list_8c_aa80441bd92270f050b0796561243f410}{abs} (int a)
+\item 
+void \hyperlink{_linked_list_8c_ade011edb62d59e706e4c600b7a91ee6d}{run} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, int position)
+\item 
+void \hyperlink{_linked_list_8c_a1770ccb8006b434a7b07385301a04187}{list\-\_\-append} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, void $\ast$value)
+\item 
+void \hyperlink{_linked_list_8c_a06408c4f092d74f12976938fe2ed8cf5}{list\-\_\-insert} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, int position, void $\ast$value)
+\item 
+void \hyperlink{_linked_list_8c_acc79aa5ede069d9de25860c4e92856bd}{list\-\_\-remove} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, int position)
+\item 
+void $\ast$ \hyperlink{_linked_list_8c_abc5ed913c644f9ec7b1b374500579364}{list\-\_\-get} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, int position)
+\item 
+void \hyperlink{_linked_list_8c_a4205586345061b0cf756a87af818f745}{list\-\_\-add\-\_\-all} (\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} list, void $\ast$$\ast$elems, int count)
+\item 
+\hyperlink{_linked_list_8h_a0e57eebf52248a41c1732d096e558e9b}{plinked\-\_\-list} \hyperlink{_linked_list_8c_a0842d2a0b1cbfe3b856cac444197a1ce}{init\-\_\-list} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_linked_list_8c_aa80441bd92270f050b0796561243f410}{\index{Linked\-List.\-c@{Linked\-List.\-c}!abs@{abs}}
+\index{abs@{abs}!LinkedList.c@{Linked\-List.\-c}}
+\subsubsection[{abs}]{\setlength{\rightskip}{0pt plus 5cm}int abs (
+\begin{DoxyParamCaption}
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{_linked_list_8c_aa80441bd92270f050b0796561243f410}
+\hypertarget{_linked_list_8c_a0842d2a0b1cbfe3b856cac444197a1ce}{\index{Linked\-List.\-c@{Linked\-List.\-c}!init\-\_\-list@{init\-\_\-list}}
+\index{init\-\_\-list@{init\-\_\-list}!LinkedList.c@{Linked\-List.\-c}}
+\subsubsection[{init\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plinked\-\_\-list} init\-\_\-list (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8c_a0842d2a0b1cbfe3b856cac444197a1ce}
+Initializes an empty list. Works like an constructor. \hypertarget{_linked_list_8c_a4205586345061b0cf756a87af818f745}{\index{Linked\-List.\-c@{Linked\-List.\-c}!list\-\_\-add\-\_\-all@{list\-\_\-add\-\_\-all}}
+\index{list\-\_\-add\-\_\-all@{list\-\_\-add\-\_\-all}!LinkedList.c@{Linked\-List.\-c}}
+\subsubsection[{list\-\_\-add\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-add\-\_\-all (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{void $\ast$$\ast$}]{elems, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8c_a4205586345061b0cf756a87af818f745}
+Inserts all elements of elems into the list. count has to be defined. \hypertarget{_linked_list_8c_a1770ccb8006b434a7b07385301a04187}{\index{Linked\-List.\-c@{Linked\-List.\-c}!list\-\_\-append@{list\-\_\-append}}
+\index{list\-\_\-append@{list\-\_\-append}!LinkedList.c@{Linked\-List.\-c}}
+\subsubsection[{list\-\_\-append}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-append (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{void $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8c_a1770ccb8006b434a7b07385301a04187}
+Appends value to the end of the list. \hypertarget{_linked_list_8c_abc5ed913c644f9ec7b1b374500579364}{\index{Linked\-List.\-c@{Linked\-List.\-c}!list\-\_\-get@{list\-\_\-get}}
+\index{list\-\_\-get@{list\-\_\-get}!LinkedList.c@{Linked\-List.\-c}}
+\subsubsection[{list\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ list\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8c_abc5ed913c644f9ec7b1b374500579364}
+Returns a pointer to the object at position. \hypertarget{_linked_list_8c_a06408c4f092d74f12976938fe2ed8cf5}{\index{Linked\-List.\-c@{Linked\-List.\-c}!list\-\_\-insert@{list\-\_\-insert}}
+\index{list\-\_\-insert@{list\-\_\-insert}!LinkedList.c@{Linked\-List.\-c}}
+\subsubsection[{list\-\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-insert (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{int}]{position, }
+\item[{void $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8c_a06408c4f092d74f12976938fe2ed8cf5}
+Inserts value into the list at the specified position. The current object at position will be at (position+1) after this operation. \hypertarget{_linked_list_8c_acc79aa5ede069d9de25860c4e92856bd}{\index{Linked\-List.\-c@{Linked\-List.\-c}!list\-\_\-remove@{list\-\_\-remove}}
+\index{list\-\_\-remove@{list\-\_\-remove}!LinkedList.c@{Linked\-List.\-c}}
+\subsubsection[{list\-\_\-remove}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-remove (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8c_acc79aa5ede069d9de25860c4e92856bd}
+Removes the element of the list at the specified position. \hypertarget{_linked_list_8c_ade011edb62d59e706e4c600b7a91ee6d}{\index{Linked\-List.\-c@{Linked\-List.\-c}!run@{run}}
+\index{run@{run}!LinkedList.c@{Linked\-List.\-c}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void run (
+\begin{DoxyParamCaption}
+\item[{{\bf plinked\-\_\-list}}]{list, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}\label{_linked_list_8c_ade011edb62d59e706e4c600b7a91ee6d}
+Run with the list-\/$>$runner to the position 

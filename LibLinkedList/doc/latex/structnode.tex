@@ -1,0 +1,36 @@
+\hypertarget{structnode}{\section{node Struct Reference}
+\label{structnode}\index{node@{node}}
+}
+
+
+{\ttfamily \#include $<$Linked\-List.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnode}{node} $\ast$ \hyperlink{structnode_a0dc1b6470487aa86d9936e3cab8b95be}{next}
+\item 
+struct \hyperlink{structnode}{node} $\ast$ \hyperlink{structnode_aba783da56f092df6846bd3b7b9555728}{previous}
+\item 
+void $\ast$ \hyperlink{structnode_a3d6d14728fec84498eff595a3e31d15a}{content}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the data node. Pointer to following and previous node are stored. 
+
+\subsection{Field Documentation}
+\hypertarget{structnode_a3d6d14728fec84498eff595a3e31d15a}{\index{node@{node}!content@{content}}
+\index{content@{content}!node@{node}}
+\subsubsection[{content}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ content}}\label{structnode_a3d6d14728fec84498eff595a3e31d15a}
+The actual content of this Node. The size only knows the creator of this object. If there are dynamically sized objects to be stored here with corresponding size it is recommended to create a struct with these informations and store a pointer to that struct in a Node. \hypertarget{structnode_a0dc1b6470487aa86d9936e3cab8b95be}{\index{node@{node}!next@{next}}
+\index{next@{next}!node@{node}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf node}$\ast$ next}}\label{structnode_a0dc1b6470487aa86d9936e3cab8b95be}
+Pointer to the following Node. \hypertarget{structnode_aba783da56f092df6846bd3b7b9555728}{\index{node@{node}!previous@{previous}}
+\index{previous@{previous}!node@{node}}
+\subsubsection[{previous}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf node}$\ast$ previous}}\label{structnode_aba783da56f092df6846bd3b7b9555728}
+Pointer to the previous Node. previous-\/$>$next should be this Node. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/paul/\-Git\-\_\-home/\-Util/\-Linked\-List/\-Lib\-Linked\-List/\hyperlink{_linked_list_8h}{Linked\-List.\-h}\end{DoxyCompactItemize}

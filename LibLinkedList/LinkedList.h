@@ -6,8 +6,20 @@
 */
 struct node
 {
+	/**
+	 * Pointer to the following Node.
+	 */
 	struct node* next;
+	/**
+	 * Pointer to the previous Node. previous->next should be this Node.
+	 */
 	struct node* previous;
+	/**
+	 * The actual content of this Node. The size only knows the creator of this object.
+	 * If there are dynamically sized objects to be stored here with corresponding size
+	 * it is recommended to create a struct with these informations and store a pointer to that struct
+	 * in a Node.
+	 */
 	void* content;
 };
 

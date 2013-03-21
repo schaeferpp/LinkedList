@@ -1,0 +1,48 @@
+.TH "linked_list" 3 "Thu Mar 21 2013" "Version 1" "LinkedList" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+linked_list \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LinkedList\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBpnode\fP \fBhead\fP"
+.br
+.ti -1c
+.RI "\fBpnode\fP \fBlast\fP"
+.br
+.ti -1c
+.RI "\fBpnode\fP \fBrunner\fP"
+.br
+.ti -1c
+.RI "int \fBrunnerpos\fP"
+.br
+.ti -1c
+.RI "int \fBsize\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents the actual list\&. Three pointers are defined: head, last and a runner\&. runnerpos defines the current index of the node* runner\&. size defines the current size of the list\&. 
+.SH "Field Documentation"
+.PP 
+.SS "\fBpnode\fP head"
+Pointer to the first element of the list\&. 
+.SS "\fBpnode\fP last"
+Pointer to the last element of the list\&. 
+.SS "\fBpnode\fP runner"
+Pointer to some element of the list\&. The current position is specified in runnerpos\&. 
+.SS "int runnerpos"
+Defines the current position of runner\&. 
+.SS "int size"
+Stores the list's current number of elements\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LinkedList from the source code\&.

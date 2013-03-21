@@ -1,0 +1,64 @@
+.TH "/home/paul/Git_home/Util/LinkedList/LibLinkedList/LinkedList.c" 3 "Thu Mar 21 2013" "Version 1" "LinkedList" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/paul/Git_home/Util/LinkedList/LibLinkedList/LinkedList.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'LinkedList\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBabs\fP (int a)"
+.br
+.ti -1c
+.RI "void \fBrun\fP (\fBplinked_list\fP list, int position)"
+.br
+.ti -1c
+.RI "void \fBlist_append\fP (\fBplinked_list\fP list, void *value)"
+.br
+.ti -1c
+.RI "void \fBlist_insert\fP (\fBplinked_list\fP list, int position, void *value)"
+.br
+.ti -1c
+.RI "void \fBlist_remove\fP (\fBplinked_list\fP list, int position)"
+.br
+.ti -1c
+.RI "void * \fBlist_get\fP (\fBplinked_list\fP list, int position)"
+.br
+.ti -1c
+.RI "void \fBlist_add_all\fP (\fBplinked_list\fP list, void **elems, int count)"
+.br
+.ti -1c
+.RI "\fBplinked_list\fP \fBinit_list\fP ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int abs (inta)\fC [inline]\fP"
+
+.SS "\fBplinked_list\fP init_list ()"
+Initializes an empty list\&. Works like an constructor\&. 
+.SS "void list_add_all (\fBplinked_list\fPlist, void **elems, intcount)"
+Inserts all elements of elems into the list\&. count has to be defined\&. 
+.SS "void list_append (\fBplinked_list\fPlist, void *value)"
+Appends value to the end of the list\&. 
+.SS "void* list_get (\fBplinked_list\fPlist, intposition)"
+Returns a pointer to the object at position\&. 
+.SS "void list_insert (\fBplinked_list\fPlist, intposition, void *value)"
+Inserts value into the list at the specified position\&. The current object at position will be at (position+1) after this operation\&. 
+.SS "void list_remove (\fBplinked_list\fPlist, intposition)"
+Removes the element of the list at the specified position\&. 
+.SS "void run (\fBplinked_list\fPlist, intposition)"
+Run with the list->runner to the position 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LinkedList from the source code\&.
