@@ -142,7 +142,7 @@ void* list_get(plinked_list list, int position)
 	return list->runner->content;
 }
 
-void list_add_all(plinked_list list, void** elems, int count)
+void list_add_all(plinked_list list, char** elems, int count)
 {
 	int i;
 	for(i=0; i<count; i++)
