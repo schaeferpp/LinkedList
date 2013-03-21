@@ -22,10 +22,25 @@ typedef node_t* pnode;
  */
 struct linked_list
 {
+	/**
+	 * Pointer to the first element of the list.
+	 */
 	pnode head;
+	/**
+	 * Pointer to the last element of the list.
+	 */
 	pnode last;
+	/**
+	 * Pointer to some element of the list. The current position is specified in runnerpos.
+	 */
 	pnode runner;
+	/**
+	 * Defines the current position of runner.
+	 */
 	int runnerpos;
+	/**
+	 * Stores the list's current number of elements.
+	 */
 	int size;
 };
 
