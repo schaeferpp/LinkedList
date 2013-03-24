@@ -38,7 +38,6 @@ void run(plinked_list list, int position)
 	switch (num)
 	{
 	case 1: // am nächsten an first
-		printf("head\n");
 		list->runner = list->head;
 		for (i = 0; i < position; i++)
 		{
@@ -46,7 +45,6 @@ void run(plinked_list list, int position)
 		}
 		break;
 	case 2:
-		printf("runner\n");
 		// insert VOR runner
 		if ((list->runnerpos - position) > 0)
 		{
@@ -65,7 +63,6 @@ void run(plinked_list list, int position)
 		}
 		break;
 	case 3: // am nächsten an last
-		printf("last\n");
 		list->runner = list->last;
 		for (i = list->size-1; i > position; i--)
 		{
