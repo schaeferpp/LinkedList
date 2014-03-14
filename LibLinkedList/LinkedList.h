@@ -63,32 +63,32 @@ typedef linked_list_t* plinked_list;
 /**
  * Appends value to the end of the list.
  */
-void list_append(plinked_list list, void* value);
+extern void list_append(plinked_list list, void* value);
 
 /**
  * Inserts value into the list at the specified position. The current object at position
  * will be at (position+1) after this operation.
  */
-void list_insert(plinked_list list, int position, void* value);
+extern void list_insert(plinked_list list, int position, void* value);
 
 /**
  * Removes the element of the list at the specified position.
  */
-void list_remove(plinked_list list, int position);
+extern void list_remove(plinked_list list, int position);
 
 /**
  * Returns a pointer to the object at position.
  */
-void* list_get(plinked_list list, int position);
+extern void* list_get(plinked_list list, int position);
 
 /**
  * Inserts all elements of elems into the list. count has to be defined.
  */
-void list_add_all(plinked_list list, void** elems, int count);
+extern void list_add_all(plinked_list list, void** elems, int count);
 
 /**
  * Initializes an empty list. Works like an constructor.
  */
-plinked_list init_list();
+extern plinked_list list_new();
 
 #endif

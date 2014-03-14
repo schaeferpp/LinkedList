@@ -73,7 +73,7 @@ void run(plinked_list list, int position)
 	list->runnerpos = position;
 }
 
-void list_append(plinked_list list, void* value)
+extern void list_append(plinked_list list, void* value)
 {
 	pnode newnode;
 	newnode = malloc(sizeof(node_t));
@@ -93,7 +93,7 @@ void list_append(plinked_list list, void* value)
 	return;
 }
 
-void list_insert(plinked_list list, int position, void* value)
+extern void list_insert(plinked_list list, int position, void* value)
 {
 	pnode newnode;
 
@@ -117,7 +117,7 @@ void list_insert(plinked_list list, int position, void* value)
 	list->size++;
 }
 
-void list_remove(plinked_list list, int position)
+extern void list_remove(plinked_list list, int position)
 {
 	if(position < 0 || position >= list->size)
 	{
@@ -129,7 +129,7 @@ void list_remove(plinked_list list, int position)
 	list->runner->next->previous = list->runner->previous;
 }
 
-void* list_get(plinked_list list, int position)
+extern void* list_get(plinked_list list, int position)
 {
 	if(position >= list->size || position < 0) 
 	{	
@@ -139,7 +139,7 @@ void* list_get(plinked_list list, int position)
 	return list->runner->content;
 }
 
-void list_add_all(plinked_list list, void** elems, int count)
+extern void list_add_all(plinked_list list, void** elems, int count)
 {
 	int i;
 	for(i=0; i<count; i++)
@@ -149,7 +149,7 @@ void list_add_all(plinked_list list, void** elems, int count)
 	return;
 }
 
-plinked_list init_list()
+extern plinked_list list_new()
 {
 	plinked_list list = malloc(sizeof(linked_list_t));
 	
